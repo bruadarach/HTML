@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yoon DongJu</title>
+</head>
+<body>
+    <h1>Yoon DongJi</h1>
+    <!-- image loaded from online website -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Yun_Dong-ju.jpg">
+
+    <!-- image downloaded at Desktop -->
+    <img src="YoonDongJu.jpg">
+
+    <!-- 오류 : 이렇게 하면 링크가 구글로 연결되지 않고 오류가 나. 
+        클릭하면 아래와 같은 주소와 오류가 떠. 
+        file:///Users/datasciencestudy/Desktop/www.google.com
+        이유는 file:// 프로토콜로 들어가기 떄문이야 -->
+    <a href="www.google.com">ERROR: Click me to go to Google</a>
+
+    <!-- 해결법: "http://" 프로토콜로 추가해주면 되 -->
+    <a href="http://www.google.com">CORRECT: Click me to go to Google</a>
+
+    <!-- 새로운 페이지2 같은 경로에 만들고 링크로 연결하기 
+        a relative page : file:///Users/datasciencestudy/Desktop/05_page2.html -->
+    <a href="05_page2.html">GO TO PAGE 2</a>
+
+</body>
+</html>
+
+<!-- img - src, link - href, 'a' tags
+    HTML Attributes Reference : https://developer.mozilla.org/ko/docs/Web/HTML/Attributes
+    Attributes : Adding additional information To Tags
+    
+    a href : inline contents
+-->
