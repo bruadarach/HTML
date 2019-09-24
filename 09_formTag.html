@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Demo</title>
+</head>
+<body>
+    <!-- login form -->
+    <h1>login</h1>
+
+    <form action="http://wikipedia.org">
+        <input name = "username" type="text" placeholder="username">
+        <input name = "password" type="password" placeholder="password">
+        <input type="submit">
+    </form>
+
+    <!-- fill in a form and send a request to somewhere else,
+        and then how to check that? 
+
+        (1) add "action" in the form tag
+        (2) after click the submit button, you will see this info in the web address bar
+        - https://www.wikipedia.org/?username=lucky&password=iloveyou
+
+        (3) therefore, successfully sent my request, using that form
+        and, in that request, the data was extracted and sent along with the request
+
+    -->
+    
+    <!-- when we submit the form, 
+        the data is sent along with the request 
+        and, there is a way to see that! How?
+        (especially see a get-request this time, 
+        but usually a post-request due to security reasons)
+
+        (1) give "name" in the each input line
+        (2) when you put data and press the submit button,
+            the given data show up in the web address bar
+        (3) question marks("?") are followed by the key-value pairs
+            - file:///Users/datasciencestudy/Desktop/09_formTag.html?username=lucky&password=Iloveyou
+        
+        <form>
+            <input name = "username" type="text" placeholder="username">
+            <input name = "password" type="password" placeholder="password">
+            <input type="submit">
+        </form>
+    
+    -->
+
+    <!-- how to add action and method? 
+
+        - action : where the form send data to 
+        - method : what HTTP method (get/post) 
+
+        (1) add "action" & "method" in form tags!
+        (2) then, send the request to the action page
+
+        <form action="http://wikipedia.org" method="GET">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <input type="submit">
+        </form>
+
+    -->
+
+    <!-- if you write a word after the form tags,
+        
+        (1) inputs with form tags: block-level attribute, so on next line the letter is displayed.
+                               if you click the submit button, forms are refreshed!
+
+            <form>
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <input type="submit">
+            </form>
+
+        (2) inputs w/o form tags: inline, therefore letter is situated in the same input line. 
+                              althoughj you click the submit button, forms remain with information
+
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <input type="submit">
+
+    -->
+
+
+    <!-- another ways to create submit button
+        
+        <input type="submit">
+        <button>Submit</button> 
+        
+    -->
+
+</body>
+</html>
+
