@@ -1,0 +1,77 @@
+<!-- Labels : alternate syntax, using "for" and "id" attributes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+
+<!-- Syntax(2)
+    for/id: lable과 input라인을 연결해주는 장치 
+            for과 id값은 꼭 같은 값으로 입력해야 함!
+            
+            * how to do? completely separate and connect input tags
+            - use for / id to connect label and input
+            - as long as thewe two match, screenwriter's and other accessibility software will know 
+              that this label that is for user name is corresponding to this input with ID username
+-->
+    
+    <body>
+        <h1>Login</h1>
+
+        <form action="http://www.wikipedia.org">
+            
+            <label for="username">Username:</label>
+            <input id="text" type="username" placeholder="username">
+            
+            <label for="password">Password</label>
+            <input idd="password" type="password" placeholder="password">
+
+            <input type="submit">
+        </form>
+
+
+<!-- Syntax (1) 
+    label:  add captions to individual elements in our form
+            The <label> element is the only way to provide explanatory information 
+            about a form field that is always appropriate 
+            (aside from any layout concerns you have). 
+            It's never a bad idea to use a <label> 
+            to explain what should be entered into an <input> or <textarea>
+
+        * Why not using a paragrph or some plain text?
+        - labels are important for making our site accessible!
+    
+        * How to do? having inputs nested inside of a label tag
+        - create a label tag and write a label name
+        - put input tags inside the label tag
+        - have two labels that correspond to two inputs
+
+    <body>
+        <h1>Login</h1>
+
+        <form action="http://www.wikipedia.org">
+            
+            <label>
+                Username:
+                <input type="text" placeholder="username">
+            </label>
+            
+            <label>
+                Password:
+                <input type="password" placeholder="password">
+            </label>
+            
+            <input type="submit">
+        </form>
+
+    </body>
+</html>
+-->
+
+<!--
+    그런데, lable을 추가한 뒤, submit 버튼을 누르면, wikipedia 주소에 
+    https://www.wikipedia.org/?
+    이렇게 뜨네. 왜 username이랑 password가 주소바에 뜨지 않는 거지?
+-->
