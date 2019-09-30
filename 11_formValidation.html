@@ -1,0 +1,44 @@
+<!--
+    validation : refers to the ability to enforce rules and structures on different parts of a form
+    ex : "you cannot leave your email blank"
+         "your password must be greater than 10 characters"
+         " your emial must follow a valid email syntax"
+-->
+
+<!--
+    1. presence validation : "required"
+    => the 'required' attribute validates that an input is not empty                              
+-->
+
+<!-- 
+    2. type validations : type : "email"
+    => try changing "type" from "text" to "email"
+    # email format rule!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form Validation</title>
+    </head>
+    
+    <body>
+        <h1>Sign In</h1>
+
+        <form action="http://www.wikipedia.org">
+
+            <label for="username">Email:</label>
+            <input id="username" type="email" placeholder="email" required>
+
+            <label for="password">Password:</label>
+            <input id="password" type="password" placeholder="password" required>
+
+            <input type="submit">
+
+        </form>
+    
+    </body>
+</html>
+
+
+
