@@ -1,0 +1,90 @@
+<!-- REQUIREMENTS : 
+    text input
+    password input
+    email input
+    radio buttons
+    select tag
+    checkbox input
+    submit input
+
+Validations reauired: first name
+                      last name
+                      email
++) Bonus : password must be between 5 and 10 characters (using only HTML)
+
+dropdown menues : month, day, and year
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form Exercise</title>
+    </head>
+    <body>
+
+        <h1>Register</h1>
+
+        <form>
+            <!-- First Name / Last Name -->
+            <label for="">First Name: </label>
+            <input type="text" placeholder="John" required>
+
+            <label for="">Last Name: </label>
+            <input type="text" placeholder="Smith" required>
+            
+            <!-- Male / Female / Other -->
+            <!-- tip: to select one, add name with a common value in input tags -->
+            <p></p>
+            <label for="male">Male</label>
+            <input name = "gender" type="radio" id="male" value="MALE">
+
+            <label for="female">Female</label>
+            <input name = "gender" type="radio" id="female" value="FEMALE">
+
+            <label for="other">Other</label>
+            <input name = "gender" type="radio" id="other" value="OTHER">
+            
+           <!-- Email -->
+           <p></p>
+           <label for="email">Email: </label>
+           <input type="email" name="email" id="email", placeholder="your email" required>
+
+           <!-- Password -->
+           <label for="password">Password: </label>
+           <input type="password" name="password" id="password" placeholder="your password" required minlength="5" maxlength="10">
+           
+           <!-- Birthday -->
+           <p></p>
+
+           <label for="birth">Birthday: </label>
+           <select name="month" id="birth">
+               <option value="Month">Month</option>
+               <option value="January">January</option>
+               <option value="February">February</option>
+               <option value="March"><Marquee></Marquee></option>
+           </select>
+
+           <select name="day" id="birth">
+               <option value="Day">Day</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+            </select>
+
+            <select name="year" id="birth">
+                <option value="Year">Year</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+            </select>
+
+            <!-- Checkbox -->
+            <p></p>
+            I agree to the terms and conditions
+            <input type="checkbox" name="checkbox">
+
+            <p></p>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
