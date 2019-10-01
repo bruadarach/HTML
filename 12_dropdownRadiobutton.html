@@ -1,0 +1,108 @@
+<!-- radio button -->
+<!-- select tag -->
+<!-- textarea tag -->
+<!-- checkbox -->
+<!-- name / value / required-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inputs Demo</title>
+</head>
+<body>
+
+<!-- radio button : name / value -->
+<p>Do you prefer cats or dogs?</p>
+
+<form>
+    <label for="dogs">Dogs: </label>
+    <input name="petChoice" id="dogs" type="radio" value="DOGS">
+    
+    <label for="cats">Cats: </label>
+    <input name="petChoice" id="cats" type="radio" value="CATS">
+
+<!-- select tag : name -->
+    <p>What's your favorite color?</p>
+    <select name="color">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Black</option>
+    </select>
+
+ <!-- select tag : name / mood -->
+    <p>What's your current mood?</p>
+    <select name="mood">
+        <option value="happy">:)</option>
+        <option value="neutral">:|</option>
+        <option value="sad">:(</option>
+    </select>
+
+<!-- textarea : name -->
+    <p>Textarea</p>
+    <textarea name="paragraph" cols="50" rows="10"></textarea>
+
+<!-- checkbox: name -->
+    <p>Checkbox</p>
+
+    <label for="dogs">Checkbox: </label>
+    <input type="checkbox" name="checkbox">
+
+    <button>Go!</button>
+</form>
+
+</body>
+</html>
+
+<!-- Setting "name" !!
+    by giving the same name "petChoice",
+    two inputs are connected,
+    so now we can only select one, not both! 
+-->
+
+<!-- <p>Do you prefer cats or dogs?</p>
+    => name / value
+
+    1. When you open the file, the address bar shows that
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html
+    
+    2. (without setting values) When you click the button(=submit), the address bar shows with "?petCHoice=on" at the end.
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=on
+
+    3. (after setting value="DOGS" and click the 'Go!'' button), the address bar shows with "?petCHoice=DOGS" at the end.
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=DOGS
+-->
+
+<!-- <p>What's your favorite color?</p> 
+    => select tag
+
+    1. <select></select>
+    2. <option></option>
+    3. <select name="color"></select>
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=DOGS&color=Green
+-->
+
+<!-- <p>What's your current mood?</p>
+    => if you want to show the value "happy" instead of ":)" or "%3A%29"   =>  # petChoice=DOGS&color=Green&mood=happy #
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?color=Red&mood=%3A%29
+
+    1. <select></select>
+    2. <option></option>
+    3. <select name="mood"></select>
+    4. <option value="happy"></option>
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=DOGS&color=Green&mood=happy
+
+    ### petChoice=DOGS&color=Green&mood=happy ###
+-->
+
+<!-- textarea : name 
+    1. <textarea></textarea>
+    2. <textarea name="paragraph" cols="50" rows="10"></textarea>
+    3. if you type in the textarea box "this is a text area", the address bar shows with "paragraph=this+is+a+text+area" at the end. 
+       - I think there is no need to use the "value" tag, as the typed content in the textarea box will be.
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=DOGS&color=Green&mood=happy&paragraph=this+is+a+text+area
+
+-->
+
+<!-- checkboc : 
+    file:///Users/datasciencestudy/Desktop/HTML_udemy/12_dropdownRadiobutton.html?petChoice=DOGS&color=Green&mood=happy&paragraph=hello+world%21&checkbox=on
+-->
