@@ -1,0 +1,36 @@
+<!-- 이전까지 데이터 전송 방법 : GET 방식 -->
+<!-- 지금 사용할 데이터 전송 방법 : POST 방식 (속성 method 설정!) -->
+<!-- <form> 태그
+    - 속성 action 
+    - 속성 method : 1) URL을 통한 정보 전달 <input type="password" name="pwd" method="get">
+                   2) 정보를 감춰서 전달 <input type="password" name="pwd" method="post">
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <form action="http://localhost/method.php" method="post">
+        <!-- 속성 method="get" 또는 default setting 의 경우 -->
+        <!-- 제출결과 : http://localhost/method.php?id=suji&pwd=1111 -->
+        
+        <!-- 속성 method="post" 의 경우 -->
+        <!-- 제출결과 : http://localhost/method.php -->
+            
+            <input type="text" name="id">
+            <!-- (method 적용 전) 제출결과 : http://localhost/method.php?id=suji -->
+
+            <input type="password" name="pwd">
+            <!-- (method 적용 전) 제출결과 : http://localhost/method.php?id=suji&pwd=1111 -->
+            <!-- 문제점 : 비밀번호가 URL에 노출됨 
+            <!-- 해결방법 : 속성 method="post"
+                          1) URL을 통해 정보 바로 전달 = GET방식 
+                          2) URL이 아닌 감춰서 전달하는 방식 = POST방식 -->
+            
+            <input type="submit">
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!--
+    <label> : 무언가의 이름표
+        - 속성 for : label이 누구의 이름표인지 구분하고 나타내주는 고유연결식별표
+    <input> : 여러가지 속성 타입을 통해 데이터를 입력받을 수 있는 태그
+        - 속성 id : label태그의 속성 for과 연결시켜주는 고유연결식별표/커넥터
+        - 속성 type : 
+            - <input type = "button">
+            - <input type = "checkbox">
+            - <input type = "password">
+            - <input type = "radio">
+            - <input type = "reset">
+            - <input type = "submit">
+            - <input type = "text">
+            - 그외 다양한 HTML Input Types 확인 : https://www.w3schools.com/html/html_form_input_types.asp
+-->
+
+<html>
+    <body>
+        <form action="">
+            <p>
+                <!-- 기본 포맷 
+                text
+                <input type="text" name="id" value="default value"> 
+                -->
+
+                <!-- <label> 적용 방법 1 : for & id 연결 -->
+                <!-- 'text'가 그냥 있으면 어떤 의미인지 분명하지 않은데, <label>로 감싸주면 무언가의 이름표라는 것을 태그로 정확하게 표현해주는 것임 -->
+                <!-- 하지만, <label>로 감싸줘도, 아래 input태그에 대한 <label>인지 분명하지 않음 -->
+                <!-- 따라서, 각각의 <label>이 누구의 이름표인지 연결시켜줘야 함 -->
+                <!-- 어떻게? <label for=" "과 input id=" "로 연결! -->
+                <!-- 의미 : text는 input 태그의 이름표이다! 라는 정보를 나타냄-->
+                <!-- 변화 : label을 설정해주면, text를 (이름표를) 누르면 연결된 input란으로 자동으로 커서가 이동하여 입력할 수 있게 설정됨 -->
+                <label for="id_txt">text :</label>
+                <input id="id_txt" type="text" name="id" value="default value">
+            </p>
+
+            <p>
+                <label for="password">password :</label>
+                <input id="password" type="password" name="pwd" value="default value">
+            </p>
+
+            <p>
+                <!-- <label> 적용 방법 2 : <label></label>로 그룹핑할 부분 전체를 감싸주기 -->
+                <label>text area :
+                    <textarea id="comment" cols="50" rows="2">default value</textarea>
+                </label>
+            </p>
+
+            <p>
+                <!-- 기존 : 체크박스를 자체를 클릭해야만 함 -->
+                <!-- 변화 : label을 설정해주면, 그룹핑된 영역, 예를 들면 '붉은색' 텍스트를 클릭해도 체크박스 선택이 자동으로 되도록 설정됨 -->
+                <label>
+                    <input type="checkbox" name="color" value="red">붉은색
+                </label>
+
+                <label for="color_blue">
+                    <input id="color_blue" type="checkbox" name="color" value="red">파란색
+                </label>
+            </p>
+        </form>
+    </body>
+</html>

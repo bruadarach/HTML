@@ -1,0 +1,30 @@
+<!--
+    <form> 태그 : 사용자가 입력한 정보를, 서버로 전송할 때 설정하는 태그
+        - 속성 action : 입력한 정보를 보낼 주소
+
+    <input> 태그 : 정보 입력하는 박스
+        - 속성 type : 입력할 것의 구체적인 종류
+            - "text" : 문자 입력
+            - "password" : 패스워드로 입력한 것들이 감춰지는 타입
+            - "submit" : 입력한 것을 전송하는 버튼
+        - 속성 name : 입력한 정보를 서버로 보낼때, 각각의 입력값을 구분하기 위한 고유식별아이디 같은 역할을 하는 듯
+                     정보 입력 후, submit버튼을 누르면, 주소창에 각각 name별 입력한 정보가 출력됨
+                     e.g) http://localhost/login.php?id=sss&pwd=pppp&address=%qqq
+        - 속성 value : 미리 입력 셋팅된 기본값(default)을 설정
+
+    <textarea> : 여러줄의 텍스트 입력이 필요할 때 사용 / default value 설정은 따로 속성 value을 사용하지 않음!
+        - 속성 cols : 가로폭 columns(열) - 값만큼의 글자가 입력될 수 있을만큼 가로폭이 커짐
+        - 속성 rows : 세로폭 row(줄/행) - 값만큼의 행/줄을 생성하므로 세로폭이 커짐
+-->
+
+<html>
+    <body>
+        <form action="">
+            <p>text : <input type="text" name="id" value="default value"></p>
+            <p>password : <input type="password" name="pwd" value="default value"></p>
+            <p>text area : 
+                <textarea cols="50" rows="2">default value</textarea>
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+    <label> : 무언가의 이름표
+        - 속성 for : label이 누구의 이름표인지 구분하고 나타내주는 고유연결식별표
+    <input> : 여러가지 속성 타입을 통해 데이터를 입력받을 수 있는 태그
+        - 속성 id : label태그의 속성 for과 연결시켜주는 고유연결식별표/커넥터
+        - 속성 type : 
+            - <input type = "button">
+            - <input type = "checkbox">
+            - <input type = "password">
+            - <input type = "radio">
+            - <input type = "reset">
+            - <input type = "submit">
+            - <input type = "text">
+            - <input type= "file"> : 파일을 업로드 하는 태그. 서버에 업로드한 파일을 보내려면 아래와 같은 태그 추가 및 속성 설정 필요
+                - <input type="file" name="profile"> : profile 이란 이름으로 서버에 파일이 전송됨
+                - <form action="http://localhost/upload.php" method="post" encrype="multipart/form-data">
+                - <input type="text" name="id"> : 파일을 전송하면서 다른 정보도 전송하고 싶을 때 (e.g) id정보와 file을 같이 전송하고 싶을 때
+                - <input type="submit">
+
+            - 그외 다양한 HTML Input Types 확인 : https://www.w3schools.com/html/html_form_input_types.asp
+-->
+
+<html>
+    <head>
+        <meta chatset="utf-8">
+    </head>
+
+    <head>
+        <form action="http://localhost/upload.php" method="post" encrype="multipart/form-data">
+            <input type="text" name="id"> <!-- 파일을 전송하면서 다른 정보도 전송하고 싶을 때/ id정보와 file을 같이 전송하고 싶을 때 -->
+            <input type="file" name="profile"> <!-- profile 이란 이름으로 서버에 전송됨 -->
+            <input type="submit">
+        </form>
+    </head>
+</html>

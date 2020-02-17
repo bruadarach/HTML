@@ -1,0 +1,52 @@
+<!--
+    <radio> : 라디오 버튼 
+        - 속성 name :  name으로 버튼을 그룹핑해주면, 같은 이름으로 지정해준 버튼들은 하나의 버튼만 선택되도록 설정됨
+        - 속성 value : 고유 값 이름 지정
+        - 속성 checked : default 디폴트 기본값 버튼 설정 (값이 없는 속성)
+    
+    <checkbox> : 다중선택 버튼
+        - 속성 name : name으로 버튼을 그룹핑해주면, 같은 이름으로 지정해준 버튼들은 하나의 버튼만 선택되도록 설정됨
+        - 속성 value : 고유 값 이름 지정
+        - 속성 checked : default 디폴트 기본값 버튼 설정 (값이 없는 속성)
+-->
+
+<html>
+    <head>
+        <meta charset="htf-8">
+    </head>
+
+    <body>
+        <form action="http://localhost/order.php">
+
+        <!-- 라디오 버튼 기본 설정은 한번 버튼 클릭하면 물릴 수 없는 설정 -->
+            <p>
+            <h1>색상(단일선택)</h1>
+            붉은색 : <input type="radio" checked>
+            파란색 : <input type="radio">
+            검은색 : <input type="radio">
+            </p>
+            
+            <!-- 라디오 버튼 속성값에 동일한 name값으로 그룹핑으로 묶어, 그룹 중 1개 값만 선택되도록 설정 -->
+            <p>
+            <h1>색상(단일선택)</h1>
+            붉은색 : <input type="radio" name="color" value="red" checked> 
+            파란색 : <input type="radio" name="color" value-"blue">
+            검은색 : <input type="radio" name="color" value="black">
+            </p>
+
+            <!-- 체크박스 버튼을 사용해 다중 선택이 가능하도록 설정 -->
+            <p>  
+            <h1>사이즈(다중선택)</h1>     
+            95: <input type="checkbox" name="size" value="95">
+            100: <input type="checkbox" name="size" value="100">
+            105: <input type="checkbox" name="size" value="105">
+            </p>
+
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+<!--
+    폼 제출 결과 : http://localhost/order.php?color=black&size=95&size=100
+-->

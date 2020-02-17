@@ -1,0 +1,23 @@
+<!--
+    <input> 태그 : 정보 입력하는 박스
+        - 속성 type : 입력할 것의 구체적인 종류
+            - "text" : 문자 입력
+            - "password" : 패스워드로 입력한 것들이 감춰지는 타입
+            - "submit" : 입력한 것을 전송하는 버튼
+        - 속성 name : 입력한 정보를 서버로 보낼때, 각각의 입력값을 구분하기 위한 고유식별아이디 같은 역할을 하는 듯
+                     정보 입력 후, submit버튼을 누르면, 주소창에 각각 name별 입력한 정보가 출력됨
+                     e.g) http://localhost/login.php?id=sss&pwd=pppp&address=%qqq
+    <form> 태그 : 사용자가 입력한 정보를, 서버로 전송할 때 설정하는 태그
+        - 속성 action : 입력한 정보를 보낼 주소
+-->
+
+<html>
+    <body>
+        <form action="http://localhost/login.php">
+            <p>아이디: <input type="text" name="id"></p>
+            <p>비밀번호: <input type="password" name="pwd"></p>
+            <p>주소: <input type="text" name="address"></p>
+            <input type="submit">
+        </form>
+    </body>
+</html>

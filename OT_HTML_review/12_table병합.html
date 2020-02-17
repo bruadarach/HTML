@@ -1,0 +1,51 @@
+<!-- 수직병합 / 수평병합
+    <td> : 테이블바디<tbody>의 하위 태그이자 각각 데이터 정보를 나타냄
+        - 속성 rowspan : rowspan 값의 행이 수직으로 병합됨
+                        주의할 점은, 해당하는 값만큼 아래 행의 <td></td>태그를 지워야 함
+        - 속성 colspan : colspan 값의 열이 수평으로 병합됨
+                        주의할 점은, 해당하는 값만큼 아래 행의 <td></td>태그를 지워야 함
+-->
+
+<html>
+
+<body>
+    <table border=2>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+                <th>주소</th>
+                <th>회비</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>김준수</td>
+                <td>남</td>
+                <td rowspan="2">서울</td>
+                <td>100,000원</td>
+            </tr>
+
+            <tr>
+                <td>김미미</td>
+                <td>여</td>
+                <!-- <td>서울</td> -->
+                <td>100,000원</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">합계</td>
+                <!--
+                <td></td>
+                <td></td> -->
+                <td>200,000원</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+
+</html>

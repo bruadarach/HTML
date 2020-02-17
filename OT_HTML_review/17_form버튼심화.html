@@ -1,0 +1,30 @@
+<!--
+    <form> 태그 : 서버로 폼내용을 전송시키기 위한 셋팅 태그
+        - 속성 type="submit" : 폼에 인풋된 내용을 서버로 전송시키는 버튼
+        - 속성 type="button" : 폼에 인풋된 내용을 서버로 전송안시킴/ 그냥 버튼ui
+                              단독 HTML 사용보다는, 주로 자바스크립트(onclick)와 같이 사용함
+        - 속성 type="reset" : <form>태그 안에 속한 입력된 인풋 정보들 모두 초기화
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- <form> 태그 : 서버로 폼내용을 전송시키기 위한 셋팅 태그 -->
+        <form action="http://localhost/form.phh">
+
+            <!-- type="text" 텍스트 인풋 폼 -->
+            <input type="text">
+            <!-- type="submit" 서버로 전송시키는 버튼 -->
+            <input type="submit" value="Let's submit!"> 
+            <!-- type="button" 서버로 전송안시킴/ 그냥 버튼ui / 주로 자바스크립트(onclick)와 사용함 -->
+            <input type="button" value="nothing happen" onclick="alert('hello world')">
+            <!-- type="reset" <form>태그 안에 속한 입력된 인풋 정보들 모두 초기화 -->
+            <input type="reset">
+
+        </form>
+        
+    </body>
+</html>

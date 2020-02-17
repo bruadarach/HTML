@@ -1,0 +1,24 @@
+<!--
+    <input type="hidden"> : 서버로 데이터를 전송 시, ui가 필요없거나 또는 몰래 서버로 전송해야할 때
+    
+    다양한 HTML Input Types : https://www.w3schools.com/html/html_form_input_types.asp
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <form action="http://localhost/hidden.php">
+            <!-- type="text"로 눈에 보이는 ui에 값을 입력하여 서버로 전송 -->
+            <!-- 전송결과(값 'hello' 입력) : http://localhost/hidden.php?id=hello -->
+            <input type="text" name="id">
+            <!-- type="hidden" 눈에 보이는 ui는 없지만, 서버로 어떤 (특정)값을 전송하고 싶을 때 -->
+            <!-- 전송결과 : http://localhost/hidden.php?id=&hide=suji -->
+            <!-- 전송결과(값 'hello' 입력) : http://localhost/hidden.php?id=hello&hide=suji -->
+            <input type="hidden" name="hide" value="suji">
+            <input type="submit">
+        </form>
+    </body>
+</html>

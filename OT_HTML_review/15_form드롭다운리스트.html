@@ -1,0 +1,39 @@
+<!-- Dropdown List / Combo Box
+    <select> : 선택지옵션화 된 데이터를 드롭다운리스트화
+        - 속성 name : 어떤 이름으로 선택지 항목값을 서버에 전송할지 설정
+        - 속성 multiple : 다중선택 가능하게 리스트 만들기 
+                         다중선택 하는 방법은, 값 선택 + cmd/ctl 키 누르고 다른 값 선택
+                         http://localhost/color.php?color=red&color2=red&color2=black
+    <option> : 선택지옵션화 + 줄바꿈
+        - 속성 value : 어떤 이름으로 서버에 선택값을 전송할지 설정
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <form action="http://localhost/color.php">
+            <h1>색상</h1>
+
+            <select name="color"> <!-- 어떤 이름으로 서버에 전송될지 설정 / http://localhost/color.php?color=검은색 -->
+                <option value="red">붉은색</option>
+                <option value="blue">파란색</option>
+                <option value="black">검은색</option> <!-- value 셋팅하면, 전송되는 값은 이렇게 나타남 / http://localhost/color.php?color=black -->
+            </select>
+
+            <h1>색상2(다중선택)</h1>
+            
+            <select name="color2" multiple>
+                <!-- 어떤 이름으로 서버에 전송될지 설정 / http://localhost/color.php?color=검은색 -->
+                <option value="red">붉은색</option>
+                <option value="blue">파란색</option>
+                <option value="black">검은색</option> <!-- value 셋팅하면, 전송되는 값은 이렇게 나타남 / http://localhost/color.php?color=black -->
+            </select>
+
+            <input type="submit">
+
+        </form>
+    </body>
+</html>
