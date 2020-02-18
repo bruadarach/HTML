@@ -1,0 +1,53 @@
+<!-- 검색엔진 최적화(SEO)
+    
+    구글 검색엔진 최적화 가이드 : http://static.googleusercontent.com/media/www.google.com/ko//intl/ko/webmasters/docs/search-engine-optimization-starter-guide-ko.pdf
+
+    <head> 태그
+        - 속성 <link rel="canonical" href="">
+            : 사용자들이 서로 다른 버전의 URL을 가지고 페이지를 링크하는 경우,
+              해당 내용에 대한 인지도가 여러 URL로 분산도리 수 있으므로,
+              페이지 구조 및 내부 링크에 하나의 URL만을 사용하여 참조하는 것이 좋음
+            
+            : 만약 여러 URL을 통해 같은 내용의 페이지에 접속되는 경우,
+              URL 중에서 가장 우선적인 URL로 301 리디렉션을 설정하는 것이 좋은 해경 방법
+            
+            : 만약 리디렉션을 사용할 수 없다면, <link rel="canonical" href=""> 링크 속성을 이용해
+              표준 URL을 지정하도록 함
+
+            : 리다이렉션이란? 2.html로 접속해도 -> 1.html로 다시 보내는 것
+
+    /robots.txt
+        : 웹사이트에 접근하는 로봇들에게 접근 허용, 일정 부분 허용, 불허를 설정함. 
+            - e.g) https://www.naver.com/robots.txt  
+
+                User-agent: *
+                Disallow: /      <-- 네이버의(naver.com/ 이후의) 모든 웹페이지에 대해서 어떠한 로봇(크롤러 등의)접속도 불허함 / 네이버에서 만들어진 컨텐츠는 다른 검색 엔진에서는 노출되지 않고 접근할 수 없다.  
+                Allow : /$
+
+            - e.g) https://www.google.com/robots.txt
+            - e.g) https://en.wikipedia.org/robots.txt
+
+    /sitemap : 웹사이트의 지도 / 웹사이트에 있는 각각의 페이지 정보를 담음 / 검색엔진 로봇들이 해석해서 어떠한 작업을 처리
+
+
+    페이지랭크(순위) : 어떤 사이트가 먼저 검색 엔진에 노출되는가에 대한 순위 / 그때 사용하는 알고리즘
+-->
+
+<html>
+    <head>
+        <!-- 예를 들어 1.html 과 2.html이 똑같은 내용을 갖고 있고,
+             사용자가 검색엔진에 검색했을 때 1.html이 노출되었으면 한다면,
+             1.html이 아닌 파일(2.html)에 아래와 같이 속성 추가 -->
+        <link rel="canonical" href="http://localhost/1.html">
+    </head>
+    <body>
+        프론트엔드 개발자
+
+        <!-- <a href> 태그로 이미지에 링크 걸기 -->
+        <a href="1.html">
+        <!-- 주로 이미지는 images 디렉토리 파일에 저장함 -->
+        <img src="images/1.png" alt="그림대체설명문구">
+        </a> 
+
+    </body>
+</html>
